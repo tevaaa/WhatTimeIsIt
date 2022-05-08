@@ -1,0 +1,6 @@
+{
+    "name": "What time is it ?",
+    "description": "An extension that show you the time all around the world !",
+    "version": "1.0",
+    "manifest_version": 3
+  }
