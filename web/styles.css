@@ -1,6 +1,59 @@
+html{
+  border: 1px solid #F55353;
+  box-shadow: none;
+}
+  h1
+{
+  color: #F6F54D;
+}
 
+#title
+{
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+h2
+{
+  color:#FEB139;
+}
 body
 {
-  height: 400px;
-  width: 250px;
+  height: 500px;
+  width: 300px;
+  background: #285583;
+  background: linear-gradient(135deg, #285583 35%, #326394 100%);
+}
+
+button
+{
+  background: #F55353;
+	color: inherit;
+	border: none;
+	padding: 6px 15px;
+  border-radius: 5px;
+	outline: inherit;
+  color : #0c2a47;
+  font-size: 1.2em;
+  font-weight: bold;
+
+}
+
+button:hover
+{
+  transition: 200ms;
+  background: #da4848;
+  cursor: pointer;
+}
+
+
+input
+{
+  background-color: #285583;
+  outline: inherit;
+  box-shadow: none;
+  border: solid #F55353 1px;
+  border-radius: 5px;
+  padding: 5px;
+  color:#F55353 ;
 }

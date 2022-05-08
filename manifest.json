@@ -7,13 +7,12 @@
     {
         "service_worker" : "js/background.js"
     },
-    "permissions": ["storage","activeTab","scripting"],
     "action":
     {
-        "default_popup": "src/popup.html",
+        "default_popup": "web/popup.html",
         "default_icon": 
         {
             "16": "https://ibb.co/JBbTYsw"
         }
     }
-  }
+}
