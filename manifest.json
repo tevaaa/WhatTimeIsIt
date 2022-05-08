@@ -2,5 +2,18 @@
     "name": "What time is it ?",
     "description": "An extension that show you the time all around the world !",
     "version": "1.0",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "background" : 
+    {
+        "service_worker" : "js/background.js"
+    },
+    "permissions": ["storage","activeTab","scripting"],
+    "action":
+    {
+        "default_popup": "src/popup.html",
+        "default_icon": 
+        {
+            "16": "https://ibb.co/JBbTYsw"
+        }
+    }
   }
