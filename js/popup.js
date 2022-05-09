@@ -13,6 +13,10 @@ function readTimeZone (data)
         datalist.innerHTML += '<option value= '+ data[i] + '>'+ data[i] +'</option>';
     }
 }
+// ON CLICK GO TO CLOCKS PAGE
+document.getElementById("myClocks").addEventListener("click", function(){
+  window.location.href = 'activeClocks.html'
+});
 
 // GET CITY INPUT --------
 var input = document.getElementById('input');
