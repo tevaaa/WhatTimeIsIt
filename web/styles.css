@@ -1,8 +1,7 @@
 html{
   border: 1px solid #F55353;
-  box-shadow: none;
 }
-  h1
+h1
 {
   color: #F6F54D;
 }
@@ -36,17 +35,13 @@ button
   color : #0c2a47;
   font-size: 1.2em;
   font-weight: bold;
-
 }
-
 button:hover
 {
   transition: 200ms;
   background: #da4848;
   cursor: pointer;
 }
-
-
 input
 {
   background-color: #285583;
@@ -56,4 +51,10 @@ input
   border-radius: 5px;
   padding: 5px;
   color:#F55353 ;
+}
+#showTime
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

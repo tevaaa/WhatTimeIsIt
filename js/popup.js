@@ -14,11 +14,42 @@ function readTimeZone (data)
     }
 }
 
-// -----------------------
+// GET CITY INPUT --------
+var input = document.getElementById('input');
 
 document.getElementById("search").addEventListener("click", function(){
-    value = input.value;
-    console.log(value);
+    apiRequest(input.value);
 });
 
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        apiRequest(input.value);
+    }
+});
 
+// GET TIME FROM API -----
+
+function apiRequest(city)
+{
+    var url = 'https://worldtimeapi.org/api/timezone/' + city; 
+    fetch(url)
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      addOrShow(data.datetime)
+    })
+    .catch((err) => {
+      alert("Sorry we couldn't found your data. Enter a valid input...")
+    })
+}
+
+// WORK WITH RETRIEVED DATA
+
+function addOrShow(time)    // time format 2022-05-09T06:20:25.387589+00:00
+{
+    
+    time = time.slice(11, 19)
+    var clock = document.getElementById('clock');
+    clock.innerHTML = '<h2 id = "clock">'+ time + '</h2>'
+}
