@@ -52,8 +52,21 @@ function apiRequest(city)
 
 function addOrShow(time)    // time format 2022-05-09T06:20:25.387589+00:00
 {
-    
+    document.getElementById("add").style.visibility = "visible";
     time = time.slice(11, 19)
     var clock = document.getElementById('clock');
-    clock.innerHTML = '<h2 id = "clock">'+ time + '</h2>'
+    clock.innerHTML = '<h2 id = "clock">'+ time+1 + '</h2>'
 }
+
+// add to chrome storage when add timers pressed
+document.getElementById("add").addEventListener("click", function()
+{
+  storageLength = chrome.storage.sync.get(function(result)
+  {
+      i = (Object.keys(result).length);
+      chrome.storage.sync.set({[i] : input.value});
+      alert("Clock added");
+  });
+})
+
+
